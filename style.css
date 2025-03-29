@@ -474,3 +474,89 @@ header {
     font-size: 1.5rem; /* Títulos algo más pequeños en móviles */
   }
 }
+/* Estilos generales para la cabecera */
+.nav2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+}
+
+.logo-text {
+  margin-left: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Menú de navegación en escritorio */
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 1rem;
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+
+/* -------------------------------------
+   MEDIA QUERIES: Menú para móviles
+--------------------------------------- */
+@media (max-width: 768px) {
+  /* Ocultar el menú de navegación y mostrar el botón hamburguesa */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    display: none; /* Oculto por defecto */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .nav-menu li {
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Cuando se active el menú, se muestra */
+  .nav-menu.active {
+    display: flex;
+  }
+}
