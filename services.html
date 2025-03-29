@@ -2,12 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Alcón Osteopatía - Inicio</title>
+  <title>Alcón Osteopatía - Servicios</title>
   <link rel="icon" href="Images/logoAlconOsteopatia.png" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Íconos de Font Awesome -->
   <script src="https://kit.fontawesome.com/c1e8c6306e.js" crossorigin="anonymous"></script>
-  <!-- Hoja de estilo principal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,52 +25,51 @@
     </nav>
   </header>
 
-  <!-- Sección "Sobre Nosotros" -->
-  <section id="about">
-    <div class="aboutBox">
-      <h2 class="title">Sobre Nosotros</h2>
-      <p>
-        En nuestra clínica de osteopatía, nos dedicamos a mejorar tu calidad de vida. 
-        Nuestros profesionales están comprometidos con tu bienestar, ofreciendo tratamientos 
-        personalizados que se adaptan a tus necesidades. Aquí, no solo tratamos síntomas, 
-        sino que buscamos la raíz del problema para que puedas vivir plenamente. 
-        ¡Tu salud es nuestro objetivo!
-      </p>
-    </div>
-    <img class="mainImage" src="Images/home1.jpg" alt="Imagen de la clínica" />
-  </section>
-
-  <!-- Sección "Testimonios" -->
-  <section class="testimonials">
+  <!-- Sección "Servicios" -->
+  <section id="services">
     <div class="main2">
-      <h2 class="title">Testimonios de Clientes <i class="far fa-comment-dots"></i></h2>
+      <h2 class="title">Nuestros Servicios <i class="far fa-arrow-alt-circle-right"></i></h2>
     </div>
     <div class="line-break"></div>
-    <!-- Carrusel de testimonios -->
-    <div class="testimonial-carousel">
-      <div class="testimonial active">
+    <div class="wrapper">
+      <!-- Masaje Descontracturante -->
+      <div class="gallery">
+        <img class="image" src="Images/service1.jpg" alt="Masaje Descontracturante">
+        <h4>Masaje Descontracturante</h4>
         <p>
-          "El tratamiento fue increíble, me ayudó a aliviar el dolor de espalda que tenía desde hace años."
+          Técnica manual enfocada en aliviar tensiones musculares y mejorar la circulación sanguínea.
+          Ideal para personas con estrés, dolores musculares o rigidez en el cuerpo.
         </p>
-        <h4>- Ana López</h4>
       </div>
-      <div class="testimonial">
+
+      <!-- Rehabilitación de Lesiones -->
+      <div class="gallery">
+        <img class="image" src="Images/service2.jpg" alt="Rehabilitación de Lesiones">
+        <h4>Rehabilitación de Lesiones</h4>
         <p>
-          "Un lugar acogedor y un equipo profesional. ¡Recomiendo 100%!"
+          Tratamiento integral para la recuperación de lesiones musculares y articulares.
+          Aplicamos técnicas de osteopatía y ejercicios terapéuticos adaptados a cada paciente.
         </p>
-        <h4>- Carlos Ruiz</h4>
       </div>
-      <div class="testimonial">
+
+      <!-- Bruxismo -->
+      <div class="gallery">
+        <img class="image" src="Images/service3.jpg" alt="Bruxismo">
+        <h4>Bruxismo</h4>
         <p>
-          "La atención es excepcional, me sentí como en casa. ¡Gracias por todo!"
+          Terapia enfocada en aliviar la tensión mandibular y reducir los efectos del bruxismo.
+          Utilizamos técnicas de relajación y masaje para mejorar la movilidad y disminuir el dolor.
         </p>
-        <h4>- María García</h4>
       </div>
-      <div class="testimonial">
+
+      <!-- Vendaje Neuromuscular -->
+      <div class="gallery">
+        <img class="image" src="Images/service4.jpg" alt="Vendaje Neuromuscular">
+        <h4>Vendaje Neuromuscular</h4>
         <p>
-          "No solo mejoré físicamente, sino que también me siento más feliz. ¡Increíble!"
+          Aplicación de kinesiotape para mejorar la función muscular, reducir la inflamación y aliviar el dolor.
+          Técnica recomendada para deportistas y personas en proceso de rehabilitación.
         </p>
-        <h4>- Luis Martínez</h4>
       </div>
     </div>
   </section>
@@ -135,21 +132,6 @@
     </div>
   </footer>
   
-
-  <!-- Script para el carrusel de testimonios -->
-  <script>
-    let index = 0;
-    const testimonials = document.querySelectorAll(".testimonial");
-
-    function showNextTestimonial() {
-      testimonials[index].classList.remove("active");
-      index = (index + 1) % testimonials.length;
-      testimonials[index].classList.add("active");
-    }
-
-    // Cambia de testimonio cada 5 segundos
-    setInterval(showNextTestimonial, 5000);
-  </script>
   
 </body>
 </html>

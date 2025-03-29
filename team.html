@@ -2,12 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Alcón Osteopatía - Inicio</title>
+  <title>Alcón Osteopatía - Equipo</title>
   <link rel="icon" href="Images/logoAlconOsteopatia.png" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Íconos de Font Awesome -->
   <script src="https://kit.fontawesome.com/c1e8c6306e.js" crossorigin="anonymous"></script>
-  <!-- Hoja de estilo principal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,53 +25,21 @@
     </nav>
   </header>
 
-  <!-- Sección "Sobre Nosotros" -->
-  <section id="about">
-    <div class="aboutBox">
-      <h2 class="title">Sobre Nosotros</h2>
-      <p>
-        En nuestra clínica de osteopatía, nos dedicamos a mejorar tu calidad de vida. 
-        Nuestros profesionales están comprometidos con tu bienestar, ofreciendo tratamientos 
-        personalizados que se adaptan a tus necesidades. Aquí, no solo tratamos síntomas, 
-        sino que buscamos la raíz del problema para que puedas vivir plenamente. 
-        ¡Tu salud es nuestro objetivo!
-      </p>
-    </div>
-    <img class="mainImage" src="Images/home1.jpg" alt="Imagen de la clínica" />
-  </section>
-
-  <!-- Sección "Testimonios" -->
-  <section class="testimonials">
+  <!-- Sección "Equipo" -->
+  <section id="team">
     <div class="main2">
-      <h2 class="title">Testimonios de Clientes <i class="far fa-comment-dots"></i></h2>
+      <h2 class="title">Equipo</h2>
     </div>
     <div class="line-break"></div>
-    <!-- Carrusel de testimonios -->
-    <div class="testimonial-carousel">
-      <div class="testimonial active">
+    <div class="wrapper">
+      <div class="gallery">
+        <img class="image" src="Images/garnet.jpg" alt="Miembro del equipo">
+        <h4>Antonio José Alcón Ortiz</h4>
         <p>
-          "El tratamiento fue increíble, me ayudó a aliviar el dolor de espalda que tenía desde hace años."
+          Osteópata y Quiromasajista.
         </p>
-        <h4>- Ana López</h4>
       </div>
-      <div class="testimonial">
-        <p>
-          "Un lugar acogedor y un equipo profesional. ¡Recomiendo 100%!"
-        </p>
-        <h4>- Carlos Ruiz</h4>
-      </div>
-      <div class="testimonial">
-        <p>
-          "La atención es excepcional, me sentí como en casa. ¡Gracias por todo!"
-        </p>
-        <h4>- María García</h4>
-      </div>
-      <div class="testimonial">
-        <p>
-          "No solo mejoré físicamente, sino que también me siento más feliz. ¡Increíble!"
-        </p>
-        <h4>- Luis Martínez</h4>
-      </div>
+      <!-- Puedes agregar más miembros del equipo de la misma forma -->
     </div>
   </section>
 
@@ -134,22 +100,6 @@
       <p>© 2025 Alcón Osteopatía. Todos los derechos reservados.</p>
     </div>
   </footer>
-  
-
-  <!-- Script para el carrusel de testimonios -->
-  <script>
-    let index = 0;
-    const testimonials = document.querySelectorAll(".testimonial");
-
-    function showNextTestimonial() {
-      testimonials[index].classList.remove("active");
-      index = (index + 1) % testimonials.length;
-      testimonials[index].classList.add("active");
-    }
-
-    // Cambia de testimonio cada 5 segundos
-    setInterval(showNextTestimonial, 5000);
-  </script>
   
 </body>
 </html>

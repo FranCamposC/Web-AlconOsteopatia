@@ -2,12 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Alcón Osteopatía - Inicio</title>
+  <title>Alcón Osteopatía - Contacto</title>
   <link rel="icon" href="Images/logoAlconOsteopatia.png" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Íconos de Font Awesome -->
   <script src="https://kit.fontawesome.com/c1e8c6306e.js" crossorigin="anonymous"></script>
-  <!-- Hoja de estilo principal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,52 +25,36 @@
     </nav>
   </header>
 
-  <!-- Sección "Sobre Nosotros" -->
-  <section id="about">
-    <div class="aboutBox">
-      <h2 class="title">Sobre Nosotros</h2>
-      <p>
-        En nuestra clínica de osteopatía, nos dedicamos a mejorar tu calidad de vida. 
-        Nuestros profesionales están comprometidos con tu bienestar, ofreciendo tratamientos 
-        personalizados que se adaptan a tus necesidades. Aquí, no solo tratamos síntomas, 
-        sino que buscamos la raíz del problema para que puedas vivir plenamente. 
-        ¡Tu salud es nuestro objetivo!
-      </p>
+  <!-- Sección "Reserva tu Cita" -->
+  <section id="reservar">
+    <div class="reservar-container">
+      <h2 class="title">Reserva tu Cita</h2>
+      <p>¿Necesitas una consulta? Contáctanos a través de WhatsApp y agenda tu cita de manera rápida y sencilla.</p>
+      <a 
+        href="https://wa.me/34630241774?text=Hola,%20me%20gustaría%20reservar%20una%20cita." 
+        target="_blank" 
+        class="btn-reservar"
+      >
+        <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+      </a>
     </div>
-    <img class="mainImage" src="Images/home1.jpg" alt="Imagen de la clínica" />
   </section>
 
-  <!-- Sección "Testimonios" -->
-  <section class="testimonials">
-    <div class="main2">
-      <h2 class="title">Testimonios de Clientes <i class="far fa-comment-dots"></i></h2>
-    </div>
-    <div class="line-break"></div>
-    <!-- Carrusel de testimonios -->
-    <div class="testimonial-carousel">
-      <div class="testimonial active">
-        <p>
-          "El tratamiento fue increíble, me ayudó a aliviar el dolor de espalda que tenía desde hace años."
-        </p>
-        <h4>- Ana López</h4>
-      </div>
-      <div class="testimonial">
-        <p>
-          "Un lugar acogedor y un equipo profesional. ¡Recomiendo 100%!"
-        </p>
-        <h4>- Carlos Ruiz</h4>
-      </div>
-      <div class="testimonial">
-        <p>
-          "La atención es excepcional, me sentí como en casa. ¡Gracias por todo!"
-        </p>
-        <h4>- María García</h4>
-      </div>
-      <div class="testimonial">
-        <p>
-          "No solo mejoré físicamente, sino que también me siento más feliz. ¡Increíble!"
-        </p>
-        <h4>- Luis Martínez</h4>
+  <!-- Sección "Nuestra Ubicación" -->
+  <section id="ubicacion">
+    <div class="ubicacion-container">
+      <h2 class="title">Nuestra Ubicación</h2>
+      <p>Encuéntranos fácilmente en el mapa y visítanos en nuestra clínica.</p>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.780644025063!2d-6.2940271!3d37.3020975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd121b96f211f0f1%3A0x67c4b3c7106fa8b6!2sAlc%C3%B3n%20Osteopat%C3%ADa!5e0!3m2!1ses!2ses!4v1706749201234!5m2!1ses!2ses"
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>
@@ -134,22 +116,6 @@
       <p>© 2025 Alcón Osteopatía. Todos los derechos reservados.</p>
     </div>
   </footer>
-  
-
-  <!-- Script para el carrusel de testimonios -->
-  <script>
-    let index = 0;
-    const testimonials = document.querySelectorAll(".testimonial");
-
-    function showNextTestimonial() {
-      testimonials[index].classList.remove("active");
-      index = (index + 1) % testimonials.length;
-      testimonials[index].classList.add("active");
-    }
-
-    // Cambia de testimonio cada 5 segundos
-    setInterval(showNextTestimonial, 5000);
-  </script>
   
 </body>
 </html>

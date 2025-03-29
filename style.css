@@ -1,28 +1,36 @@
-/* Importamos fuente moderna de Google Fonts */
+/* -----------------------------------
+   1. IMPORTACIÓN DE FUENTE
+-------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* -----------------------------------
+   2. RESETEO BÁSICO
+-------------------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* -----------------------------------
+   3. ESTILOS BASE
+-------------------------------------- */
 body {
   font-family: 'Montserrat', sans-serif;
   color: #333;
   background-color: #f9f9f9;
 }
 
-/* ------------------- NAV / MENÚ SUPERIOR ------------------- */
-nav {
-  width: 100%;
-  background-color: #ffffff;
+/* -----------------------------------
+   4. CABECERA Y NAVEGACIÓN
+-------------------------------------- */
+header {
+  background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  position: sticky; /* Se queda fija al hacer scroll */
+  position: sticky;
   top: 0;
   z-index: 999;
 }
-
 .nav2 {
   max-width: 1200px;
   margin: 0 auto;
@@ -31,16 +39,21 @@ nav {
   justify-content: flex-end;
   padding: 0.5rem 1rem;
 }
-
 .logo {
   margin-right: auto;
 }
-
 .logo-img {
   width: 100px;
   height: auto;
 }
-
+.logo-text {
+  margin-left: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 .navItem {
   margin-left: 1rem;
   text-decoration: none;
@@ -50,16 +63,17 @@ nav {
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
-
 .navItem:hover {
-  color: #30AEAB;
+  color: #2E8B57; /* Color principal en hover */
 }
 
-/* ------------------- SECCIÓN "ABOUT" (HERO) ------------------- */
+/* -----------------------------------
+   5. SECCIÓN "ABOUT" (HERO)
+-------------------------------------- */
 #about {
   position: relative;
   display: flex;
-  flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+  flex-wrap: wrap; /* Para pantallas pequeñas */
   justify-content: space-between;
   align-items: center;
   min-height: 80vh;
@@ -68,27 +82,21 @@ nav {
   margin: 0 auto;
   padding: 2rem 1rem;
 }
-
-/* Texto sobre nosotros */
 .aboutBox {
-  flex: 1 1 400px; /* Crece, se encoge y tiene mínimo 400px */
+  flex: 1 1 400px; /* Crece y se encoge con un mínimo de 400px */
   margin-right: 1rem;
 }
-
 .aboutBox .title {
   font-size: 2rem;
   font-weight: 700;
-  color: #30AEAB;
+  color: #2E8B57;
   margin-bottom: 1rem;
 }
-
 .aboutBox p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
-
-/* Imagen principal */
 .mainImage {
   flex: 1 1 400px;
   max-width: 600px;
@@ -99,117 +107,31 @@ nav {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* ------------------- SECCIÓN "SERVICIOS" ------------------- */
-#services {
-  width: 100%;
-  margin: 2rem auto;
-  max-width: 1200px;
+/* -----------------------------------
+   6. SECCIÓN DE TESTIMONIOS
+-------------------------------------- */
+.testimonials {
+  background: #f1f1f1;
+  padding: 40px 20px;
 }
-
 .main2 {
-  background: none; /* Quitamos el fondo para hacerlo más limpio */
+  background: none;
   text-align: center;
   color: #333;
   padding: 1rem;
 }
-
 .main2 .title {
-  color: #30AEAB;
+  color: #2E8B57;
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
-
 .line-break {
   height: 2px;
   width: 60px;
-  background-color: #30AEAB;
+  background-color: #2E8B57;
   margin: 1rem auto 2rem auto;
   border-radius: 1px;
 }
-
-/* Grid de servicios */
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-  padding: 0 1rem 2rem 1rem;
-}
-
-.gallery {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.gallery:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery h4 {
-  font-size: 1.1rem;
-  color: #30AEAB;
-  margin: 1rem;
-  text-transform: uppercase;
-}
-
-.gallery p {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0 1rem 1rem 1rem;
-  line-height: 1.4;
-}
-
-/* ------------------- SECCIÓN "TEAM" ------------------- */
-#team {
-  width: 100%;
-  margin: 2rem auto;
-  max-width: 1200px;
-}
-
-#team .wrapper {
-  padding-bottom: 2rem;
-}
-
-#team .title {
-  color: #30AEAB;
-  font-size: 1.8rem;
-  text-align: center;
-}
-/* Centrar la sección del equipo cuando hay solo un miembro */
-#team .wrapper {
-    display: flex;
-    justify-content: center; /* Centra el contenido */
-    align-items: center;
-    padding-bottom: 2rem;
-}
-
-/* Ajuste de la tarjeta */
-#team .gallery {
-    max-width: 400px; /* Limita el ancho para una mejor presentación */
-    text-align: center; /* Centra el texto */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-#team .image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-/* ------------------- TESTIMONIOS (CARRUSEL) ------------------- */
 .testimonial-carousel {
   width: 90%;
   max-width: 700px;
@@ -219,14 +141,13 @@ nav {
   overflow: hidden;
   min-height: 180px;
 }
-
 .testimonial {
   display: none;
   font-size: 1.1rem;
   color: #333;
   padding: 20px;
   background: #fff;
-  border-left: 4px solid #30AEAB;
+  border-left: 4px solid #2E8B57;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   margin: 0 auto;
@@ -234,84 +155,264 @@ nav {
   width: 100%;
   max-width: 600px;
 }
-
 .testimonial.active {
   display: block;
   opacity: 1;
 }
-
 .testimonial h4 {
   margin-top: 10px;
   font-weight: bold;
-  color: #30AEAB;
+  color: #2E8B57;
 }
 
-/* ------------------- FOOTER ------------------- */
-footer {
+/* -----------------------------------
+   7. SECCIÓN "SERVICIOS"
+-------------------------------------- */
+#services {
   width: 100%;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
-
-footer span a {
-  color: #fff;
-  font-size: 1.2rem;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 2rem 1rem;
 }
-
-footer h5 {
-  margin: 0.5rem 0;
+.gallery {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.gallery:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.gallery h4 {
+  font-size: 1.1rem;
+  color: #2E8B57;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+.gallery p {
   font-size: 0.9rem;
+  color: #555;
+  margin: 0 1rem 1rem 1rem;
+  line-height: 1.4;
 }
 
-footer h3 {
-  font-size: 1.2rem;
-  margin: 1.5rem 0 1rem 0;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+/* -----------------------------------
+   8. SECCIÓN "TEAM"
+-------------------------------------- */
+#team {
+  width: 100%;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
-
-.sMedia {
+#team .wrapper {
+  padding-bottom: 2rem;
   display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+  justify-content: center; 
+  align-items: center;
+}
+#team .title {
+  color: #2E8B57;
+  font-size: 1.8rem;
+  text-align: center;
+}
+#team .gallery {
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#team .image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.sMedia a {
-  color: #fff;
-  font-size: 1.5rem;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease;
+/* -----------------------------------
+   9. SECCIÓN "RESERVAR" / CONTACTO
+-------------------------------------- */
+#reservar {
+  text-align: center;
+  background: #2E8B57;
+  color: white;
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-.sMedia a:hover {
-  color: #30AEAB;
+.reservar-container {
+  max-width: 600px;
+  margin: 0 auto;
 }
-
-.footerItem {
-  text-decoration: none;
+#reservar .title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-
-/* ------------------- BOTONES ------------------- */
-.button1 {
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
+#reservar p {
   font-size: 1rem;
-  background: #30AEAB;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.btn-reservar {
+  display: inline-flex;
+  align-items: center;
+  background: #25D366;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
   transition: background 0.3s ease;
 }
-
-.button1:hover {
-  background: #2d9b9a;
+.btn-reservar i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+.btn-reservar:hover {
+  background: #1EBE5D;
 }
 
-/* ------------------- MEDIA QUERIES ------------------- */
-@media only screen and (max-width: 850px) {
+/* -----------------------------------
+   10. SECCIÓN "UBICACIÓN"
+-------------------------------------- */
+#ubicacion {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.ubicacion-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#ubicacion .title {
+  font-size: 2rem;
+  color: #2E8B57;
+  margin-bottom: 1rem;
+}
+#ubicacion p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.map-container {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------------------------
+   11. FOOTER RESPONSIVE
+-------------------------------------- */
+.footer {
+  background-color: #2C3E50; /* Fondo oscuro */
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 2rem;
+}
+/* Botón superior dentro del footer (opcional) */
+.footer-top {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer-button {
+  display: inline-block;
+  background-color: #2E8B57;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.footer-button:hover {
+  background-color: #25764A;
+}
+/* Contenedor principal del footer */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Para adaptarse en pantallas pequeñas */
+  gap: 30px;       /* Espacio entre columnas */
+  justify-content: space-between;
+}
+.footer-column {
+  flex: 1 1 200px; /* Mínimo 200px de ancho */
+  min-width: 200px;
+}
+/* Logo y texto de descripción */
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+.footer-column p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+/* Títulos de columna */
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+/* Listas del footer (menú y enlaces legales) */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+.footer-column ul li a:hover {
+  color: #2E8B57; /* Hover con tu color principal */
+}
+/* Franja inferior */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 30px;
+  font-size: 0.8rem;
+}
+
+/* -----------------------------------
+   12. MEDIA QUERIES
+-------------------------------------- */
+
+/* Ajustes para pantallas de ancho menor a 850px */
+@media (max-width: 850px) {
+  /* Sección "About": apilada */
   #about {
     flex-direction: column;
     text-align: center;
@@ -323,9 +424,38 @@ footer h3 {
   .mainImage {
     margin-top: 1rem;
   }
+  /* Navegación apilada */
+  .nav2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navItem {
+    margin: 0.5rem 0;
+  }
 }
 
-@media only screen and (max-width: 500px) {
+/* Ajustes para pantallas de ancho menor a 768px */
+@media (max-width: 768px) {
+  /* Footer: columnas apiladas */
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  /* Sección "Reservar" */
+  #reservar {
+    padding: 2rem 1rem;
+  }
+  .btn-reservar {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Ajustes extra para pantallas muy pequeñas (< 500px) */
+@media (max-width: 500px) {
   .navItem {
     font-size: 0.8rem;
     margin-left: 0.5rem;
@@ -336,103 +466,11 @@ footer h3 {
   .gallery p {
     font-size: 0.85rem;
   }
-}
-
-/* Sección de Reserva */
-#reservar {
-    text-align: center;
-    background: #30AEAB;
-    color: white;
-    padding: 3rem 1rem;
-    border-radius: 10px;
-    margin: 2rem auto;
-    max-width: 800px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.reservar-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#reservar .title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#reservar p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
-/* Botón de WhatsApp */
-.btn-reservar {
-    display: inline-flex;
-    align-items: center;
-    background: #25D366;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-.btn-reservar i {
-    margin-right: 10px;
-    font-size: 1.5rem;
-}
-
-.btn-reservar:hover {
-    background: #1EBE5D;
-}
-
-/* Adaptación para móviles */
-@media (max-width: 768px) {
-    #reservar {
-        padding: 2rem 1rem;
-    }
-    
-    .btn-reservar {
-        font-size: 1rem;
-        padding: 10px 16px;
-    }
-}
-/* Sección de Ubicación */
-#ubicacion {
-    text-align: center;
-    background: #f8f9fa;
-    padding: 3rem 1rem;
-    border-radius: 10px;
-    margin: 2rem auto;
-    max-width: 1000px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.ubicacion-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#ubicacion .title {
-    font-size: 2rem;
-    color: #30AEAB;
-    margin-bottom: 1rem;
-}
-
-#ubicacion p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
-/* Contenedor del mapa */
-.map-container {
-    width: 100%;
-    height: 450px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  .aboutBox .title,
+  #ubicacion .title,
+  #reservar .title,
+  #team .title,
+  .main2 .title {
+    font-size: 1.5rem; /* Títulos algo más pequeños en móviles */
+  }
 }
